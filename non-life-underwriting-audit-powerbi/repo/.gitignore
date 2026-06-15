@@ -1,0 +1,33 @@
+# Power BI working files (contain confidential policyholder and commercial data)
+*.pbix
+*.pbit
+*.pbip
+*.abf
+
+# Source data extracts
+*.csv
+*.xlsx
+*.xls
+*.txt
+*.json
+*.parquet
+/data/
+/extracts/
+
+# Power BI / TMDL local exports that may contain real metadata
+*.tmdl
+*.bim
+/.pbi/
+/.SemanticModel/
+/.Report/
+
+# OS and editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Keep screenshots, ignore raw recordings
+*.mp4
+*.mov
