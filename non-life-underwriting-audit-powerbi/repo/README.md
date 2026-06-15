@@ -167,6 +167,6 @@ Built as part of my work as a data and underwriting-audit analyst in non-life
 insurance. If you would like a walkthrough of the model or a live demo on
 anonymised data, feel free to reach out.
 
-- Author: YOUR NAME
-- Contact: your.email@example.com
-- LinkedIn: linkedin.com/in/your-handle
+- Author: Richard Dok
+- Contact: dokrichardm@gmail.com
+- LinkedIn: linkedin.com/in/dokrichardm
