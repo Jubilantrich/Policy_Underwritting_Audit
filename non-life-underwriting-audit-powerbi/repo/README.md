@@ -101,24 +101,26 @@ A fuller breakdown of every table, relationship, and the audit logic lives in th
 
 ---
 
-## Sample insight (illustrative figures)
+## What the output looks like
 
-The numbers below are fabricated to show the kind of output the model produces. They
-do not reflect any real portfolio.
+For every policy transaction, the model returns a plain-language verdict per check,
+which a reviewer can filter into a worklist. Verdicts are categorical, not numeric,
+so the reporting layer can quantify and route exceptions without anyone reading
+individual policy values. Representative verdict labels include:
 
-NCD leakage by previous cover type:
+- Premium: "POLICY TOTAL PREMIUM RIGHTLY CHARGED", "UNDER-CHARGED POLICY PREMIUM",
+  "CANCELLATION | REVERSAL".
+- NCD: "CORRECT NCD", "NCD WRONGLY APPLIED", "NCD ON THIRD-PARTY COVER".
+- Commission: "CORRECTLY CHARGED", "UNDER CHARGED", "OVER CHARGED COMMISSION",
+  "COMMISSION ON DIRECT BUSINESS".
+- MID reconciliation: "PREMIUM MATCH", "MIS-MATCH".
 
-| Previous cover | Violations | NCD given (sample) | Affected premium (sample) | Leakage as percent of premium |
-|----------------|-----------:|-------------------:|--------------------------:|------------------------------:|
-| Third-party only (T) | 312 | 48,500 | 1,940,000 | 2.50% |
-| Third-party variant (3) | 145 | 21,300 | 1,065,000 | 2.00% |
-| Comprehensive (C/F) | 87 | 9,700 | 970,000 | 1.00% |
-| **Total** | **544** | **79,500** | **3,975,000** | **2.00%** |
+From there, the dashboards let a reviewer slice exceptions by cover type, workgroup,
+releasing user, tariff regime, and period, then quantify the exposure and route a
+worklist back to underwriting for correction.
 
-Reading it: in this sample, 312 policies received an NCD even though the prior cover
-was third-party only, which does not earn a No-Claim-Discount. That is the single
-largest leakage driver in the example and exactly the pattern the audit is built to
-surface.
+No portfolio figures, leakage rates, or book-level findings are included in this
+repository. The repo documents the engineering and methodology only.
 
 ---
 
@@ -165,6 +167,6 @@ Built as part of my work as a data and underwriting-audit analyst in non-life
 insurance. If you would like a walkthrough of the model or a live demo on
 anonymised data, feel free to reach out.
 
-- Author: Richard Dok
-- Contact: dokrichardm@gmail.com
-- LinkedIn: linkedin.com/in/dokrichardm
+- Author: YOUR NAME
+- Contact: your.email@example.com
+- LinkedIn: linkedin.com/in/your-handle
